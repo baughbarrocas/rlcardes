@@ -1,0 +1,2 @@
+experiment.encoder_hidden = [512, 256, 256]
+experiment.latent_dim = 256

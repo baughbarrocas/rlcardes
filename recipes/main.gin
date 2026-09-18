@@ -1,0 +1,54 @@
+experiment.seed = 42
+
+experiment.input_dim = 3000
+experiment.encoder_hidden = [512, 256, 128]
+experiment.latent_dim = 128
+experiment.encoder_dropout = 0.2
+experiment.n_subpops = 8
+
+experiment.n_actions = 45
+experiment.construct_dim = 64
+experiment.policy_hidden = [256, 128]
+
+experiment.persist_hidden = [128, 64]
+experiment.key_dim = 32
+experiment.persist_dropout = 0.3
+
+experiment.dt = 0.1
+experiment.horizon_days = 60.0
+experiment.rho = 0.5
+experiment.t_max = 1e10
+experiment.delta_a = 0.02
+experiment.k_exh = 0.08
+experiment.k1 = 0.05
+experiment.k2 = 0.03
+experiment.delta_pe = 0.01
+experiment.delta_ee = 0.03
+experiment.delta_te = 0.05
+experiment.growth = 0.18
+experiment.b_max = 1e12
+experiment.kappa = 1.2e-9
+experiment.eta_pe = 0.4
+
+experiment.clip = 0.2
+experiment.gamma = 0.99
+experiment.gae_lambda = 0.95
+experiment.rollout = 2048
+experiment.n_envs = 8
+experiment.update_epochs = 4
+experiment.minibatch = 256
+experiment.value_coef = 0.5
+experiment.entropy_coef = 0.001
+experiment.max_grad_norm = 0.5
+
+experiment.lr = 3e-4
+experiment.weight_decay = 0.0
+experiment.warmup = 0
+experiment.epochs = 600
+experiment.batch_size = 64
+experiment.grad_accum = 1
+experiment.world_size = 4
+experiment.patience = 50
+experiment.precision = 'fp32'
+experiment.beta = 0.5
+experiment.reward_weights = [0.5, 0.4, 0.1]

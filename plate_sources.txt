@@ -1,0 +1,16 @@
+Single-cell training cohorts
+  Wang2021-CAR-T      GSE145809   https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE145809
+  Haradhvala2022      GSE197268   https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE197268
+  10x-PBMC-ref                    https://www.10xgenomics.com/datasets/10-k-pbm-cs-from-a-healthy-donor-v-3-chemistry-3-standard-3-0-0
+
+Construct screening (source of the simulated libraries)
+  speedingCARs        GSE214231   https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE214231
+
+External retrospective validation
+  Bai ALL cohort      GSE197215   https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE197215
+  Wilson SJCAR19                  https://doi.org/10.5061/dryad.1rn8pk0x4
+
+Derived, no external download
+  speedingCARs-sim  parameterised from the speedingCARs (GSE214231) screen
+  CARPOOL-sim       parameterised from the CARPOOL non-canonical signalling screen
+  CAR-T-persist     patient-level persistence labels broadcast from the cohorts above

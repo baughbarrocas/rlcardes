@@ -1,0 +1,56 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rlcardes"
+version = "0.1.0"
+description = "Phenotype-conditioned closed-loop reinforcement learning for CAR-T construct design"
+requires-python = ">=3.10,<3.11"
+dependencies = [
+    "torch==2.1.0",
+    "numpy==1.24.4",
+    "scipy==1.10.1",
+    "scikit-learn==1.2.2",
+    "gin-config==0.5.0",
+]
+
+[project.scripts]
+rlcardes = "rlcardes.falconer.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["rlcardes*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W", "UP", "B"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["rlcardes"]
+
+[tool.black]
+line-length = 100
+target-version = ["py310"]
+
+[tool.isort]
+profile = "black"
+line_length = 100
+known_first_party = ["rlcardes"]
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+warn_unused_ignores = true
+disable_error_code = ["no-any-return", "no-untyped-call"]
+files = ["rlcardes"]
+
+[[tool.mypy.overrides]]
+module = ["gin", "gin.*", "scipy", "scipy.*", "sklearn", "sklearn.*"]
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "rlcardes.jesses.config"
+disallow_untyped_decorators = false
